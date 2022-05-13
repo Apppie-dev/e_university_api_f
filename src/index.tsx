@@ -1,23 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import App from './App';
-import {PageLogin} from "./app/modules/login/page-login/PageLogin";
+import { routes } from "./app/core/routes";
 
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />}>
-                    <Route path="login" element={<PageLogin />}>
-                        <Route index element={<PageLogin />} />
-                    </Route>
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+    <BrowserRouter>
+        <Routes>
+            {routes.map(props => {
+                return <Route path={props.path} element={props.element}/>
+            })}
+        </Routes>
+    </BrowserRouter>
 );

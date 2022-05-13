@@ -1,1 +1,1 @@
-export { HeadersInterceptor } from './base';
+export { HeadersInterceptor } from './base.interceptor';
