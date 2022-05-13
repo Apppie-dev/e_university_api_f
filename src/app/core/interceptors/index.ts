@@ -1,0 +1,1 @@
+export { HeadersInterceptor } from './base';

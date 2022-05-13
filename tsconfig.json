@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "lib": [
       "dom",
       "dom.iterable",
@@ -19,15 +19,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-
-    "paths": {
-      "@app/models": ["src/app/shared/models/index"],
-      "@app/services": ["src/app/core/services/index"],
-      "@app/constants": ["src/app/core/constants/index"],
-      "@app/interceptors": ["src/app/core/interceptors/index"],
-      "@app/shared/*": ["src/app/shared/*"],
-    }
+    "jsx": "react-jsx"
   },
   "include": [
     "src"
