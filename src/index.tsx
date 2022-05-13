@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import App from './App';
+import {PageLogin} from "./app/modules/login/page-login/PageLogin";
 
 
 const root = ReactDOM.createRoot(
@@ -10,7 +11,13 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App/>
+            <Routes>
+                <Route path="/" element={<App />}>
+                    <Route path="login" element={<PageLogin />}>
+                        <Route index element={<PageLogin />} />
+                    </Route>
+                </Route>
+            </Routes>
         </BrowserRouter>
     </React.StrictMode>
 );
