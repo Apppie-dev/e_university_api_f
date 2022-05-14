@@ -3,7 +3,6 @@ export const SETTINGS_APP = {
   PRODUCT_VERSION: '0.0.1',
 
   // urls + redirect
-  URL_RETURN_KEY: 'returnUrl',
   URL_LOGIN: '/login',
 
   URL_HOME_CLIENT: '/app/dashboard/',
