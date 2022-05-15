@@ -11,7 +11,7 @@ root.render(
     <BrowserRouter>
         <Routes>
             {routes.map(props => {
-                return <Route path={props.path} element={props.element}/>
+                return <Route key = {props.path} path={props.path} element={props.element}/>
             })}
         </Routes>
     </BrowserRouter>
